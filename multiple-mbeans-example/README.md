@@ -4,6 +4,7 @@
 ##Running:
 
 1) add your java api key to the zorka.properties file
+
 2) run the command `./gradlew run`
 
 ##Explanation:
