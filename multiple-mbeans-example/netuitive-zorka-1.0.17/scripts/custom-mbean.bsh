@@ -1,0 +1,49 @@
+// This is sample script intended to help understanding how to implement arbitrary method instrumentation.
+
+// To run:
+//  1. update zorka.properties to add it to list of loaded scripts, i.e. scripts = jvm.bsh, calculator.bsh
+//  2. update zorka.properties to set zorka.application = Caculator
+//  3. get the api key by creating a java datasource on Netuitive Cloud: [https://app.netuitive.com].
+//  4. update zorka.properties to set netuitive.api.key using the key obtained from previous step.
+//  5. assuming 'java' command is available from system path, type 'java -javaagent:./netuitive.jar=. -jar zorka-core-test.jar
+//  6. upon prompt, start typing 1+2[enter] 3-3[enter] 2*3[enter] 3/3[enter] 3/0[enter] ...
+//  7. observe a jvm element named 'Calculator' shows up in Netuitive with genernal jvm system metrics and the CalculatorStats method call metrics
+
+// BeanShall has no notion of namespaces, so we simulate namespace using function
+// that returns reference to its own instance and then defining variable that
+// holds instance of this function.
+zorka.require("jvm.bsh");
+
+//rollup function to create the attributes we want in our rollup mbean
+_rollUpMbean() {
+
+  //our source attributes from various mbeans
+  _sourceMbeans(){
+    testValue1(){
+        return zorka.jmx("java", "com.netuitive.mbean:type=Test,name=Test1MBean", "TestValue");
+    }
+    testValue2(){
+        return zorka.jmx("java", "com.netuitive.mbean:type=Test,name=Test2MBean", "TestValue");
+    }
+    return this;
+  }  
+  sourceMbeans = _sourceMbeans();
+
+  //create our target mbean
+  _mbs = "java";
+  _targetMbean = "com.netuitive.mbean:type=Test,name=RollupTestMBean";
+  _mbean = zorka.mbean(_mbs, _targetMbean);
+
+  //create our getters for attributes we want to add to our rollup mbean
+  _getter1 = zorka.getter(sourceMbeans, "testValue1");
+  _getter2 = zorka.getter(sourceMbeans, "testValue2");
+
+  //register our getters with the rollup mbean
+  zorka.registerAttr(_mbs, _targetMbean, "testValue1", _getter1);
+  zorka.registerAttr(_mbs, _targetMbean, "testValue2", _getter2);
+
+  return this;
+}
+
+rollUpMbean = _rollUpMbean();
+

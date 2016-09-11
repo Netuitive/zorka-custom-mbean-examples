@@ -1,0 +1,58 @@
+2016-09-11 17:59:32 DEBUG AgentConfig Starting ZORKA agent 1.0.17
+2016-09-11 17:59:32 DEBUG AgentInstance Enabling Zorka SPY
+2016-09-11 17:59:32 DEBUG AgentInstance Enabling Syslog subsystem ....
+2016-09-11 17:59:32 DEBUG AgentInstance Enabling SNMP subsystem ...
+2016-09-11 17:59:32 DEBUG bsh Registered platform mbean server as 'java'
+2016-09-11 17:59:33 DEBUG ZorkaStatsCollectTask start collecting zorka stats
+2016-09-11 17:59:33 DEBUG JvmSystemStatsReport start collecting system stats
+2016-09-11 17:59:33 DEBUG MBeanServerRegistry Registering ZorkaControl MBean...
+2016-09-11 17:59:33 DEBUG JvmSystemStatsReport finished collecting system stats
+2016-09-11 17:59:33 DEBUG JvmMethodCallStatsReport start collecting method call stats
+2016-09-11 17:59:33 DEBUG JvmMethodCallStatsReport retrieving method call status for mbean=zorka:type=ZorkaStats,*, attribute=stats
+2016-09-11 17:59:33 DEBUG JvmMethodCallStatsReport finished retrieving method call status for mbean=zorka:type=ZorkaStats,*, attribute=stats
+2016-09-11 17:59:33 DEBUG JvmMethodCallStatsReport starting to build method stats element
+2016-09-11 17:59:33 DEBUG JvmMethodCallStatsReport skipping diagnositic mbean
+2016-09-11 17:59:33 DEBUG JvmMethodCallStatsReport finished building method stats element
+2016-09-11 17:59:33 DEBUG JvmMethodCallStatsReport retrieving method call status for mbean=zorka:type=ZorkaStats,*, attribute= byTag
+2016-09-11 17:59:33 DEBUG JvmMethodCallStatsReport finished retrieving method call status for mbean=zorka:type=ZorkaStats,*, attribute= byTag
+2016-09-11 17:59:33 DEBUG JvmMethodCallStatsReport starting to build method stats element
+2016-09-11 17:59:33 DEBUG JvmMethodCallStatsReport finished building method stats element
+2016-09-11 17:59:33 DEBUG JvmMethodCallStatsReport finished collecting method call stats with 0 metrics
+2016-09-11 17:59:33 DEBUG CustomMBeanStatsReport start collecting custom stats
+2016-09-11 17:59:33 DEBUG CustomMBeanStatsReport retrieving custom stats for mbean=com.netuitive.mbean:type=Test,name=TestMBean
+2016-09-11 17:59:33 DEBUG CustomMBeanStatsReport finished retrieving custom stats for mbean=com.netuitive.mbean:type=Test,name=TestMBean
+2016-09-11 17:59:33 DEBUG CustomMBeanStatsReport starting to build custom stats element
+2016-09-11 17:59:33 DEBUG CustomMBeanStatsReport finished processing stat: testvalue
+2016-09-11 17:59:33 DEBUG CustomMBeanStatsReport finished processing mbean: custom.com_netuitive_mbean.test.testmbean
+2016-09-11 17:59:33 DEBUG CustomMBeanStatsReport finished building method stats element
+2016-09-11 17:59:33 DEBUG CustomMBeanStatsReport finished collecting custom stats with 1 metrics
+2016-09-11 17:59:33 DEBUG ZorkaStatsCollectTask finished collecting zorka stats using 25 ms
+2016-09-11 18:00:00 DEBUG ZorkaStatsSendTask start reporting zorka stats
+2016-09-11 18:00:00 DEBUG JvmEnvironmentReport start collecting environment stats
+2016-09-11 18:00:00 DEBUG JvmEnvironmentReport finished collecting environment stats
+2016-09-11 18:00:00 DEBUG ComputedStatsReport start collecting computed stats
+2016-09-11 18:00:00 DEBUG ComputedStatsReport finished collecting computed stats
+2016-09-11 18:00:01 DEBUG ZorkaStatsSendTask finished reporting zorka stats using 1092 ms
+2016-09-11 18:00:33 DEBUG ZorkaStatsCollectTask start collecting zorka stats
+2016-09-11 18:00:33 DEBUG JvmSystemStatsReport start collecting system stats
+2016-09-11 18:00:33 DEBUG JvmSystemStatsReport finished collecting system stats
+2016-09-11 18:00:33 DEBUG JvmMethodCallStatsReport start collecting method call stats
+2016-09-11 18:00:33 DEBUG JvmMethodCallStatsReport retrieving method call status for mbean=zorka:type=ZorkaStats,*, attribute=stats
+2016-09-11 18:00:33 DEBUG JvmMethodCallStatsReport finished retrieving method call status for mbean=zorka:type=ZorkaStats,*, attribute=stats
+2016-09-11 18:00:33 DEBUG JvmMethodCallStatsReport starting to build method stats element
+2016-09-11 18:00:33 DEBUG JvmMethodCallStatsReport skipping diagnositic mbean
+2016-09-11 18:00:33 DEBUG JvmMethodCallStatsReport finished building method stats element
+2016-09-11 18:00:33 DEBUG JvmMethodCallStatsReport retrieving method call status for mbean=zorka:type=ZorkaStats,*, attribute= byTag
+2016-09-11 18:00:33 DEBUG JvmMethodCallStatsReport finished retrieving method call status for mbean=zorka:type=ZorkaStats,*, attribute= byTag
+2016-09-11 18:00:33 DEBUG JvmMethodCallStatsReport starting to build method stats element
+2016-09-11 18:00:33 DEBUG JvmMethodCallStatsReport finished building method stats element
+2016-09-11 18:00:33 DEBUG JvmMethodCallStatsReport finished collecting method call stats with 0 metrics
+2016-09-11 18:00:33 DEBUG CustomMBeanStatsReport start collecting custom stats
+2016-09-11 18:00:33 DEBUG CustomMBeanStatsReport retrieving custom stats for mbean=com.netuitive.mbean:type=Test,name=TestMBean
+2016-09-11 18:00:33 DEBUG CustomMBeanStatsReport finished retrieving custom stats for mbean=com.netuitive.mbean:type=Test,name=TestMBean
+2016-09-11 18:00:33 DEBUG CustomMBeanStatsReport starting to build custom stats element
+2016-09-11 18:00:33 DEBUG CustomMBeanStatsReport finished processing stat: testvalue
+2016-09-11 18:00:33 DEBUG CustomMBeanStatsReport finished processing mbean: custom.com_netuitive_mbean.test.testmbean
+2016-09-11 18:00:33 DEBUG CustomMBeanStatsReport finished building method stats element
+2016-09-11 18:00:33 DEBUG CustomMBeanStatsReport finished collecting custom stats with 1 metrics
+2016-09-11 18:00:33 DEBUG ZorkaStatsCollectTask finished collecting zorka stats using 4 ms

@@ -1,0 +1,46 @@
+buildscript {
+    repositories {
+        mavenLocal()
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.7.RELEASE")
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'spring-boot'
+
+jar {
+    baseName = 'MBeanTest'
+    version =  "$version"
+}
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+applicationDefaultJvmArgs = [
+    "-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=8878",
+    "-javaagent:./netuitive-zorka-1.0.17/netuitive.jar=./netuitive-zorka-1.0.17"
+]
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile("org.springframework.boot:spring-boot-starter")
+    compile("com.fasterxml.jackson.core:jackson-core:2.2.+")
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile("org.springframework.cloud:spring-cloud-aws-context:1.0.4.RELEASE")
+    compile("org.springframework.cloud:spring-cloud-aws-messaging:1.0.4.RELEASE")
+    compile("org.springframework.cloud:spring-cloud-aws-autoconfigure:1.0.4.RELEASE")
+
+
+    testCompile("junit:junit")
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.3'
+}

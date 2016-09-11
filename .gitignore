@@ -1,0 +1,6 @@
+/single-mbean-example/.nb-gradle/
+/multiple-mbeans-example/.nb-gradle/
+/single-mbean-example/build/
+/multiple-mbeans-example/build/
+/single-mbean-example/.gradle/
+/multiple-mbeans-example/.gradle/
